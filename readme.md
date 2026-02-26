@@ -1,7 +1,8 @@
 ## 📌 Project Overview
 
 This project simulates a phishing campaign using GoPhish and detects malicious PowerShell execution using Wazuh SIEM. We will be luring our users by sending a payroll phishing email & at the same time delivering
-a malicious(Not actual malware) payload into the same device.
+a malicious(Not actual malware) payload into the same device to demonstrate detection and alert triage capabilities.
+
 
 The objective of this lab is to:
 
@@ -43,7 +44,7 @@ The objective of this lab is to:
 ### 1. Phishing Email
 
 - Phishing email was sent using GoPhish tool in Kali Linux. I created a landing page, email template, added users, and created a campaign to launch a phishing simulation.
-- Python server is running on Kali machine mimicing attackers device and malicious file is being stored in the same device to deliver payload.
+- Python HTTP server was hosted on Kali machine mimicing attackers device and malicious file is being stored in the same device to deliver payload.
 
 ---
 
@@ -54,6 +55,8 @@ The objective of this lab is to:
 - Once user enters their username and password. Clicking on signin gets connected to server in kali and request .hta file to be downloaded in user's/victim's machine.
 - PowerShell payload gets executed when user open that file.
 - Users login credentials get stored in attacker's device which can be exploited by attacker to perform further actions based on their goal.
+
+> ⚠️ Note: The payload used in this lab is non-malicious and strictly for educational purposes.
 
 ---
 
